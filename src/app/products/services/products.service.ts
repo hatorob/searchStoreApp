@@ -66,6 +66,8 @@ export class ProductsService {
   private loadLocalStorageProduct = () => {
     let productListHistory = localStorage.getItem("historyProducts");
     if(productListHistory) this._productsList = JSON.parse(productListHistory);
+    if(this._productsList.length > 0) this.addProduct(this._productsList[0]);
+
   }
 
 

@@ -21,5 +21,10 @@ export class SidebarComponent {
   }
 
 
+  public addProduct = (product: string): void => {
+    this.serviceProduct.addProduct(product);
+  }
+
+
 
 }
