@@ -2,11 +2,13 @@
   <div class="sidebar__title">
     <h1 class="text-center text-light mt-3">ProductsApp</h1>
   </div>
-
   <div class="d-flex flex-column p-3">
-    <button class="btn btn-light mt-2">Uno</button>
-    <button class="btn btn-light mt-2">Uno</button>
-    <button class="btn btn-light mt-2">Uno</button>
+    <button
+      *ngFor="let product of productList"
+      class="btn btn-light mt-2"
+    >
+      {{ product }}
+    </button>
   </div>
 
 </div>
