@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'product-search-box',
@@ -20,12 +21,16 @@ export class SearchBoxComponent {
   public product!: ElementRef<HTMLInputElement>;
 
   //! Debemos traernos nuestro servicio para actualizar el valor
-  constructor() {
+  constructor( private serviceProduct: ProductsService ) {
 
   }
 
   public searchProduct = (): void => {
-    console.log("Obtengo el valor deseado", this.product.nativeElement.value);
+    let product: string = this.product.nativeElement.value;
+    this.serviceProduct.addProduct(product);
+    //!Limipamos el valor del input
+    this.product.nativeElement.value = "";
+    //console.log("Obtengo el valor deseado", this.product.nativeElement.value);
   }
 
 }
