@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
+import { ProductSearch } from '../../interfaces/products.interface';
 
 @Component({
   selector: 'products-list',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './products-list.component.css'
 })
 export class ProductsListComponent {
+
+
+  @Input()
+  public productsList!: ProductSearch[];
+
 
 }

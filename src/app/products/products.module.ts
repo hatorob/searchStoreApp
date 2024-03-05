@@ -4,6 +4,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { CardComponent } from './components/card/card.component';
 import { HomePageComponent } from './pages/home/home-page/home-page.component';
+import { ReplaceImgPipe } from './pipes/replace-img.pipe';
 
 
 
@@ -12,7 +13,8 @@ import { HomePageComponent } from './pages/home/home-page/home-page.component';
     ProductsListComponent,
     SearchBoxComponent,
     CardComponent,
-    HomePageComponent
+    HomePageComponent,
+    ReplaceImgPipe
   ],
   imports: [
     CommonModule
